@@ -1,0 +1,105 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 24px;
+    background: rgb(233, 240, 239);
+    color: #1e2b36;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.container h1{
+    margin: 0;
+    margin-bottom: 10px;
+    color: #1e2b36;
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.controls input {
+    flex: 1 1 220px;
+    min-width: 0;
+    padding: 11px 12px;
+    border: 1px solid #aeb9c2;
+    border-radius: 6px;
+}
+
+.controls button {
+    padding: 11px 16px;
+    border: 0;
+    border-radius: 6px;
+    background: #3276b9;
+    color: white;
+    cursor: pointer;
+}
+
+/* .controls button:disabled {
+    padding: 11px 16px;
+    border: 0;
+    border-radius: 6px;
+    background: #3276b9;
+    color: white;
+    cursor: pointer;
+    cursor: not-allowed;
+    opacity: 0.9;
+} */
+
+#characterCards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+    gap: 18px;
+}
+
+.card {
+    min-width: 0;
+    padding: 16px;
+    border: 1px solid #cbd4db;
+    border-radius: 10px;
+    background: white;
+}
+
+.card img {
+    display: block;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 8px;
+    object-fit: contain;
+}
+
+.card h3 {
+    margin: 8px 0 14px;
+    text-align: center;
+}
+
+.card-stats div {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #e6ebef;
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 16px;
+    }
+
+    .controls {
+        gap: 8px;
+    }
+
+    .controls button {
+        flex: 1 1 auto;
+    }
+}
