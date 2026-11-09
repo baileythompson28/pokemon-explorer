@@ -44,17 +44,6 @@ body {
     cursor: pointer;
 }
 
-/* .controls button:disabled {
-    padding: 11px 16px;
-    border: 0;
-    border-radius: 6px;
-    background: #3276b9;
-    color: white;
-    cursor: pointer;
-    cursor: not-allowed;
-    opacity: 0.9;
-} */
-
 #characterCards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));

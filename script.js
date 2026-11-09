@@ -24,8 +24,8 @@ function cardTemplate(pokemon) {
     )
     .join("");
 
-  div.innerHTML = `
-    <img src="${pokemon.sprites.front_default}" alt="${pokemon.name}">
+  div.innerHTML = 
+    `<img src="${pokemon.sprites.front_default}" alt="${pokemon.name}">
     <h3>#${pokemon.id} ${pokemon.name}</h3>
     <dl class="card-stats">${stats}</dl>`;
   return div;
@@ -66,5 +66,5 @@ searchBtn.addEventListener("click", async () => {
 });
 
 first12Btn.addEventListener("click", () => loadPokemon(1, 12));
-showMorePokemonBtn.addEventListener("click", () => loadPokemon(1, 30));
+showMorePokemonBtn.addEventListener("click", () => loadPokemon(1, 36));
 loadPokemon();
