@@ -4,6 +4,7 @@ const searchBtn = document.getElementById("searchBtn");
 const first12Btn = document.getElementById("first12Btn");
 const showMorePokemonBtn = document.getElementById("showMorePokemonBtn");
 
+//#6
 async function getPokemon(id) {
   const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
   if (!response.ok) throw new Error("Not found");
@@ -15,7 +16,7 @@ function cardTemplate(pokemon) {
   div.className = "card";
   const stats = pokemon.stats
     .map(
-      ({ base_stat: value, stat }) => `
+      ({base_stat: value, stat}) => `
         <div>
           <dt>${stat.name.replace("-", " ")}</dt>
           <dd>${value}</dd>
@@ -31,6 +32,7 @@ function cardTemplate(pokemon) {
   return div;
 }
 
+//#7
 function displayPokemon(pokemons) {
   cards.innerHTML = "";
   pokemons.forEach((pokemon) => cards.appendChild(cardTemplate(pokemon)));

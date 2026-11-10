@@ -1,5 +1,7 @@
 class Pokemon {
+    static totalCreated = 0;
     constructor(data) {
+        Pokemon.totalCreated++;
         const stats = Object.fromEntries(
             data.stats.map(({base_stat, stat}) => [stat.name, base_stat]),
         );
@@ -20,6 +22,10 @@ class Pokemon {
             throw new TypeError("error");
         }
         this._health = Math.max(0, Math.min(this.maxHealth, value));
+    }
+
+        static getTotalCreated(){
+            return Pokemon.totalCreated;
     }
 
     //Reduce current health by amount 
@@ -48,6 +54,7 @@ class Pokemon {
     resetHealth() {
         this.health = this.maxHealth;
     }
+
 
 }
 
