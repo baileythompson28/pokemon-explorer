@@ -23,6 +23,14 @@ class Pokemon {
         }
         this._health = Math.max(0, Math.min(this.maxHealth, value));
     }
+    
+    get healthPercent() {
+        return (this.health / this.maxHealth) * 100;
+    }
+
+    get isFainted() {
+        return this.health === 0;
+    }
 
         static getTotalCreated(){
             return Pokemon.totalCreated;

@@ -4,6 +4,7 @@ const searchBtn = document.getElementById("searchBtn");
 const first12Btn = document.getElementById("first12Btn");
 const showMorePokemonBtn = document.getElementById("showMorePokemonBtn");
 
+
 //#6
 async function getPokemon(id) {
   const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
@@ -38,8 +39,8 @@ function displayPokemon(pokemons) {
   pokemons.forEach((pokemon) => cards.appendChild(cardTemplate(pokemon)));
 }
 
-async function loadPokemon(startId = 1, endId = 24) {
-  cards.innerHTML = "Loading...";
+async function loadPokemon(startId = 1, endId = 12) {
+  cards.innerHTML = "loading...";
   const results = [];
 
   for (let id = startId; id <= endId; id++) {
